@@ -808,7 +808,7 @@ class CsvReaderService {
     });
   }
   getCsvData() {
-    const csvUrl = './responsive-map-sk/points.csv';
+    const csvUrl = 'https://abdosalehpkcs.github.io/responsive-map-sk/points.csv';
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.lastValueFrom)(this.http.get(csvUrl, {
       responseType: 'text'
     })).then(data => {
