@@ -808,7 +808,7 @@ class CsvReaderService {
     });
   }
   getCsvData() {
-    const csvUrl = './responsive-map-sk/../.../../assets/points.csv';
+    const csvUrl = './responsive-map-sk/assets/points.csv';
     return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.lastValueFrom)(this.http.get(csvUrl, {
       responseType: 'text'
     })).then(data => {
