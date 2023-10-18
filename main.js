@@ -747,8 +747,8 @@ __webpack_require__.r(__webpack_exports__);
 leaflet__WEBPACK_IMPORTED_MODULE_0__.Marker.prototype.options.icon = new leaflet__WEBPACK_IMPORTED_MODULE_0__.Icon({
   iconSize: [25, 41],
   iconAnchor: [13, 0],
-  iconUrl: '../../assets/marker-icon.png',
-  shadowUrl: '../../assets/marker-shadow.png'
+  iconUrl: './responsive-map-sk/assets/marker-icon.png',
+  shadowUrl: './responsive-map-sk/assets/marker-shadow.png'
 });
 var Category;
 (function (Category) {
@@ -949,39 +949,39 @@ class CsvReaderService {
   }
   getCategoryImage(category) {
     const categoryImageMap = {
-      [Category.Zdravie]: "../../assets/svg/zdravie.svg",
-      [Category.PsychologickaPomoc]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.IntegracneCentra]: "../../assets/svg/PSI.svg",
-      [Category.StarostlivostDo7Rokov]: "../../assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
-      [Category.PlatformaRodin]: "../../assets/svg/trojlistok-platforma.svg",
-      [Category.Skola]: "../../assets/svg/skola.svg",
-      [Category.FinancnaAMaterialnaPodpora]: "../../assets/svg/financna-podpora.svg",
-      [Category.PsychosocialnaPodpora]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.PodlaZnevyhodnenia]: "../../assets/svg/nevidiaci.svg",
-      [Category.VolnyCas]: "../../assets/svg/sport.svg",
-      [Category.VynimkaPreUkrajinskeMuzov]: "../../assets/svg/vynimka-pre-ukrajinskych-muzov.svg",
-      [Category.VseobecneInformaciePreOdidencov]: "../../assets/svg/vseobecne-informacie.svg",
-      [Category.HealthAndTherapy]: "../../assets/svg/zdravie.svg",
-      [Category.PsychologicalHelp]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.IntegrationCenters]: "../../assets/svg/PSI.svg",
-      [Category.CareForChildrenUnder7]: "../../assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
-      [Category.PlatformOfFamilies]: "../../assets/svg/trojlistok-platforma.svg",
-      [Category.School]: "../../assets/svg/skola.svg",
-      [Category.FinancialSupport]: "../../assets/svg/financna-podpora.svg",
-      [Category.PsychosocialSupport]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.ServicesByDisability]: "../../assets/svg/nevidiaci.svg",
-      [Category.FreeTime]: "../../assets/svg/sport.svg",
-      [Category.ЗдоровяІТерапія]: "../../assets/svg/zdravie.svg",
-      [Category.ПсихологічнаДопомога]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.ЦентриІнтеграції]: "../../assets/svg/PSI.svg",
-      [Category.ДоглядЗаДітьмиДо7Років]: "../../assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
-      [Category.ПлатформаСімей]: "../../assets/svg/trojlistok-platforma.svg",
-      [Category.Школа]: "../../assets/svg/skola.svg",
-      [Category.ФінансоваПідтримка]: "../../assets/svg/financna-podpora.svg",
-      [Category.ПсихологічноСоціальнаПідтримка]: "../../assets/svg/psychosocialna-podpora.svg",
-      [Category.ПослугиДляОсібЗОбмеженимиМожливостями]: "../../assets/svg/nevidiaci.svg",
-      [Category.Дозвілля]: "../../assets/svg/sport.svg",
-      [Category.Default]: "../../assets/svg/trojlistok-platforma.svg"
+      [Category.Zdravie]: "./responsive-map-sk/assets/svg/zdravie.svg",
+      [Category.PsychologickaPomoc]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.IntegracneCentra]: "./responsive-map-sk/assets/svg/PSI.svg",
+      [Category.StarostlivostDo7Rokov]: "./responsive-map-sk/assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
+      [Category.PlatformaRodin]: "./responsive-map-sk/assets/svg/trojlistok-platforma.svg",
+      [Category.Skola]: "./responsive-map-sk/assets/svg/skola.svg",
+      [Category.FinancnaAMaterialnaPodpora]: "./responsive-map-sk/assets/svg/financna-podpora.svg",
+      [Category.PsychosocialnaPodpora]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.PodlaZnevyhodnenia]: "./responsive-map-sk/assets/svg/nevidiaci.svg",
+      [Category.VolnyCas]: "./responsive-map-sk/assets/svg/sport.svg",
+      [Category.VynimkaPreUkrajinskeMuzov]: "./responsive-map-sk/assets/svg/vynimka-pre-ukrajinskych-muzov.svg",
+      [Category.VseobecneInformaciePreOdidencov]: "./responsive-map-sk/assets/svg/vseobecne-informacie.svg",
+      [Category.HealthAndTherapy]: "./responsive-map-sk/assets/svg/zdravie.svg",
+      [Category.PsychologicalHelp]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.IntegrationCenters]: "./responsive-map-sk/assets/svg/PSI.svg",
+      [Category.CareForChildrenUnder7]: "./responsive-map-sk/assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
+      [Category.PlatformOfFamilies]: "./responsive-map-sk/assets/svg/trojlistok-platforma.svg",
+      [Category.School]: "./responsive-map-sk/assets/svg/skola.svg",
+      [Category.FinancialSupport]: "./responsive-map-sk/assets/svg/financna-podpora.svg",
+      [Category.PsychosocialSupport]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.ServicesByDisability]: "./responsive-map-sk/assets/svg/nevidiaci.svg",
+      [Category.FreeTime]: "./responsive-map-sk/assets/svg/sport.svg",
+      [Category.ЗдоровяІТерапія]: "./responsive-map-sk/assets/svg/zdravie.svg",
+      [Category.ПсихологічнаДопомога]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.ЦентриІнтеграції]: "./responsive-map-sk/assets/svg/PSI.svg",
+      [Category.ДоглядЗаДітьмиДо7Років]: "./responsive-map-sk/assets/svg/starostlivost-pre-deti-do-7-rokov.svg",
+      [Category.ПлатформаСімей]: "./responsive-map-sk/assets/svg/trojlistok-platforma.svg",
+      [Category.Школа]: "./responsive-map-sk/assets/svg/skola.svg",
+      [Category.ФінансоваПідтримка]: "./responsive-map-sk/assets/svg/financna-podpora.svg",
+      [Category.ПсихологічноСоціальнаПідтримка]: "./responsive-map-sk/assets/svg/psychosocialna-podpora.svg",
+      [Category.ПослугиДляОсібЗОбмеженимиМожливостями]: "./responsive-map-sk/assets/svg/nevidiaci.svg",
+      [Category.Дозвілля]: "./responsive-map-sk/assets/svg/sport.svg",
+      [Category.Default]: "./responsive-map-sk/assets/svg/trojlistok-platforma.svg"
     };
     return categoryImageMap[category] || categoryImageMap[Category.Default];
   }
