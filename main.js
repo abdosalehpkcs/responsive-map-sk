@@ -799,8 +799,8 @@ class CsvReaderService {
       icon: new leaflet__WEBPACK_IMPORTED_MODULE_0__.Icon({
         iconSize: [25, 41],
         iconAnchor: [13, 0],
-        iconUrl: '../../assets/marker-icon.png',
-        shadowUrl: '../../assets/marker-shadow.png'
+        iconUrl: './responsive-map-sk/assets/marker-icon.png',
+        shadowUrl: './responsive-map-sk/assets/marker-shadow.png'
       })
     };
     this.navigatorService.getEvent('navigate').subscribe(e => {
