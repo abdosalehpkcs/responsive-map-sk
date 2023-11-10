@@ -3110,499 +3110,503 @@ module.exports={
 }
 
 },{}],23:[function(_dereq_,module,exports){
-module.exports={
-    "meta": {
-        "capitalizeFirstLetter": true
-    },
-    "v5": {
-        "constants": {
-            "ordinalize": {
-                "1": "første",
-                "2": "anden",
-                "3": "tredje",
-                "4": "fjerde",
-                "5": "femte",
-                "6": "sjette",
-                "7": "syvende",
-                "8": "ottende",
-                "9": "niende",
-                "10": "tiende"
-            },
-            "direction": {
-                "north": "Nord",
-                "northeast": "Nordøst",
-                "east": "Øst",
-                "southeast": "Sydøst",
-                "south": "Syd",
-                "southwest": "Sydvest",
-                "west": "Vest",
-                "northwest": "Nordvest"
-            },
-            "modifier": {
-                "left": "venstresving",
-                "right": "højresving",
-                "sharp left": "skarpt venstresving",
-                "sharp right": "skarpt højresving",
-                "slight left": "svagt venstresving",
-                "slight right": "svagt højresving",
-                "straight": "ligeud",
-                "uturn": "U-vending"
-            },
-            "lanes": {
-                "xo": "Hold til højre",
-                "ox": "Hold til venstre",
-                "xox": "Benyt midterste spor",
-                "oxo": "Hold til højre eller venstre"
-            }
+    module.exports={
+        "meta": {
+            "capitalizeFirstLetter": true
         },
-        "modes": {
-            "ferry": {
-                "default": "Tag færgen",
-                "name": "Tag færgen {way_name}",
-                "destination": "Tag færgen i retning {destination}"
-            }
-        },
-        "phrase": {
-            "two linked by distance": "{instruction_one} derefter, efter {distance}, {instruction_two}",
-            "two linked": "{instruction_one}, derefter {instruction_two}",
-            "one in distance": "Efter {distance} {instruction_one}",
-            "name and ref": "{name} ({ref})",
-            "exit with number": "afkørsel {exit}"
-        },
-        "arrive": {
-            "default": {
-                "default": "Du er ankommet til din {nth} destination",
-                "upcoming": "Du vil ankomme til din {nth} destination",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}"
-            },
-            "left": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til venstre",
-                "upcoming": "Du vil ankomme til din {nth} destination på venstre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til venstre"
-            },
-            "right": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til højre",
-                "upcoming": "Du vil ankomme til din {nth} destination på højre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til højre"
-            },
-            "sharp left": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til venstre",
-                "upcoming": "Du vil ankomme til din {nth} destination på venstre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til venstre"
-            },
-            "sharp right": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til højre",
-                "upcoming": "Du vil ankomme til din {nth} destination på højre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til højre"
-            },
-            "slight right": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til højre",
-                "upcoming": "Du vil ankomme til din {nth} destination på højre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til højre"
-            },
-            "slight left": {
-                "default": "Du er ankommet til din {nth} destination, som befinder sig til venstre",
-                "upcoming": "Du vil ankomme til din {nth} destination på venstre hånd",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, som befinder sig til venstre"
-            },
-            "straight": {
-                "default": "Du er ankommet til din {nth} destination, der befinder sig lige frem",
-                "upcoming": "Du vil ankomme til din {nth} destination foran dig",
-                "short": "Du er ankommet",
-                "short-upcoming": "Du vil ankomme",
-                "named": "Du er ankommet til {waypoint_name}, der befinder sig lige frem"
-            }
-        },
-        "continue": {
-            "default": {
-                "default": "Drej til {modifier}",
-                "name": "Drej til {modifier} videre ad {way_name}",
-                "destination": "Drej til {modifier} mod {destination}",
-                "exit": "Drej til {modifier} ad {way_name}"
-            },
-            "straight": {
-                "default": "Fortsæt ligeud",
-                "name": "Fortsæt ligeud ad {way_name}",
-                "destination": "Fortsæt mod {destination}",
-                "distance": "Fortsæt {distance} ligeud",
-                "namedistance": "Fortsæt {distance} ad {way_name}"
-            },
-            "sharp left": {
-                "default": "Drej skarpt til venstre",
-                "name": "Drej skarpt til venstre videre ad {way_name}",
-                "destination": "Drej skarpt til venstre mod {destination}"
-            },
-            "sharp right": {
-                "default": "Drej skarpt til højre",
-                "name": "Drej skarpt til højre videre ad {way_name}",
-                "destination": "Drej skarpt til højre mod {destination}"
-            },
-            "slight left": {
-                "default": "Drej left til venstre",
-                "name": "Drej let til venstre videre ad {way_name}",
-                "destination": "Drej let til venstre mod {destination}"
-            },
-            "slight right": {
-                "default": "Drej let til højre",
-                "name": "Drej let til højre videre ad {way_name}",
-                "destination": "Drej let til højre mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending",
-                "name": "Foretag en U-vending tilbage ad {way_name}",
-                "destination": "Foretag en U-vending mod {destination}"
-            }
-        },
-        "depart": {
-            "default": {
-                "default": "Kør mod {direction}",
-                "name": "Kør mod {direction} ad {way_name}",
-                "namedistance": "Fortsæt {distance} ad {way_name}mod {direction}"
-            }
-        },
-        "end of road": {
-            "default": {
-                "default": "Drej til {modifier}",
-                "name": "Drej til {modifier} ad {way_name}",
-                "destination": "Drej til {modifier} mof {destination}"
-            },
-            "straight": {
-                "default": "Fortsæt ligeud",
-                "name": "Fortsæt ligeud ad {way_name}",
-                "destination": "Fortsæt ligeud mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending for enden af vejen",
-                "name": "Foretag en U-vending ad {way_name} for enden af vejen",
-                "destination": "Foretag en U-vending mod {destination} for enden af vejen"
-            }
-        },
-        "fork": {
-            "default": {
-                "default": "Hold til {modifier} ved udfletningen",
-                "name": "Hold mod {modifier} på {way_name}",
-                "destination": "Hold mod {modifier} mod {destination}"
-            },
-            "slight left": {
-                "default": "Hold til venstre ved udfletningen",
-                "name": "Hold til venstre på {way_name}",
-                "destination": "Hold til venstre mod {destination}"
-            },
-            "slight right": {
-                "default": "Hold til højre ved udfletningen",
-                "name": "Hold til højre på {way_name}",
-                "destination": "Hold til højre mod {destination}"
-            },
-            "sharp left": {
-                "default": "Drej skarpt til venstre ved udfletningen",
-                "name": "Drej skarpt til venstre ad {way_name}",
-                "destination": "Drej skarpt til venstre mod {destination}"
-            },
-            "sharp right": {
-                "default": "Drej skarpt til højre ved udfletningen",
-                "name": "Drej skarpt til højre ad {way_name}",
-                "destination": "Drej skarpt til højre mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending",
-                "name": "Foretag en U-vending ad {way_name}",
-                "destination": "Foretag en U-vending mod {destination}"
-            }
-        },
-        "merge": {
-            "default": {
-                "default": "Flet til {modifier}",
-                "name": "Flet til {modifier} ad {way_name}",
-                "destination": "Flet til {modifier} mod {destination}"
-            },
-            "straight": {
-                "default": "Flet",
-                "name": "Flet ind på {way_name}",
-                "destination": "Flet ind mod {destination}"
-            },
-            "slight left": {
-                "default": "Flet til venstre",
-                "name": "Flet til venstre ad {way_name}",
-                "destination": "Flet til venstre mod {destination}"
-            },
-            "slight right": {
-                "default": "Flet til højre",
-                "name": "Flet til højre ad {way_name}",
-                "destination": "Flet til højre mod {destination}"
-            },
-            "sharp left": {
-                "default": "Flet til venstre",
-                "name": "Flet til venstre ad {way_name}",
-                "destination": "Flet til venstre mod {destination}"
-            },
-            "sharp right": {
-                "default": "Flet til højre",
-                "name": "Flet til højre ad {way_name}",
-                "destination": "Flet til højre mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending",
-                "name": "Foretag en U-vending ad {way_name}",
-                "destination": "Foretag en U-vending mod {destination}"
-            }
-        },
-        "new name": {
-            "default": {
-                "default": "Fortsæt {modifier}",
-                "name": "Fortsæt {modifier} ad {way_name}",
-                "destination": "Fortsæt {modifier} mod {destination}"
-            },
-            "straight": {
-                "default": "Fortsæt ligeud",
-                "name": "Fortsæt ad {way_name}",
-                "destination": "Fortsæt mod {destination}"
-            },
-            "sharp left": {
-                "default": "Drej skarpt til venstre",
-                "name": "Drej skarpt til venstre ad {way_name}",
-                "destination": "Drej skarpt til venstre mod {destination}"
-            },
-            "sharp right": {
-                "default": "Drej skarpt til højre",
-                "name": "Drej skarpt til højre ad {way_name}",
-                "destination": "Drej skarpt til højre mod {destination}"
-            },
-            "slight left": {
-                "default": "Fortsæt til venstre",
-                "name": "Fortsæt til venstre ad {way_name}",
-                "destination": "Fortsæt til venstre mod {destination}"
-            },
-            "slight right": {
-                "default": "Fortsæt til højre",
-                "name": "Fortsæt til højre ad {way_name}",
-                "destination": "Fortsæt til højre mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending",
-                "name": "Foretag en U-vending ad {way_name}",
-                "destination": "Foretag en U-vending mod {destination}"
-            }
-        },
-        "notification": {
-            "default": {
-                "default": "Fortsæt {modifier}",
-                "name": "Fortsæt {modifier} ad {way_name}",
-                "destination": "Fortsæt {modifier} mod {destination}"
-            },
-            "uturn": {
-                "default": "Foretag en U-vending",
-                "name": "Foretag en U-vending ad {way_name}",
-                "destination": "Foretag en U-vending mod {destination}"
-            }
-        },
-        "off ramp": {
-            "default": {
-                "default": "Tag afkørslen",
-                "name": "Tag afkørslen ad {way_name}",
-                "destination": "Tag afkørslen mod {destination}",
-                "exit": "Vælg afkørsel {exit}",
-                "exit_destination": "Vælg afkørsel {exit} mod {destination}"
-            },
-            "left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til venstre",
-                "exit_destination": "Vælg afkørsel {exit} til venstre mod {destination}\n"
-            },
-            "right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til højre",
-                "exit_destination": "Vælg afkørsel {exit} til højre mod {destination}"
-            },
-            "sharp left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til venstre",
-                "exit_destination": "Vælg afkørsel {exit} til venstre mod {destination}\n"
-            },
-            "sharp right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til højre",
-                "exit_destination": "Vælg afkørsel {exit} til højre mod {destination}"
-            },
-            "slight left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til venstre",
-                "exit_destination": "Vælg afkørsel {exit} til venstre mod {destination}\n"
-            },
-            "slight right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}",
-                "exit": "Vælg afkørsel {exit} til højre",
-                "exit_destination": "Vælg afkørsel {exit} til højre mod {destination}"
-            }
-        },
-        "on ramp": {
-            "default": {
-                "default": "Tag afkørslen",
-                "name": "Tag afkørslen ad {way_name}",
-                "destination": "Tag afkørslen mod {destination}"
-            },
-            "left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}"
-            },
-            "right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}"
-            },
-            "sharp left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}"
-            },
-            "sharp right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}"
-            },
-            "slight left": {
-                "default": "Tag afkørslen til venstre",
-                "name": "Tag afkørslen til venstre ad {way_name}",
-                "destination": "Tag afkørslen til venstre mod {destination}"
-            },
-            "slight right": {
-                "default": "Tag afkørslen til højre",
-                "name": "Tag afkørslen til højre ad {way_name}",
-                "destination": "Tag afkørslen til højre mod {destination}"
-            }
-        },
-        "rotary": {
-            "default": {
-                "default": {
-                    "default": "Kør ind i rundkørslen",
-                    "name": "Tag rundkørslen og kør fra ad {way_name}",
-                    "destination": "Tag rundkørslen og kør mod {destination}"
+        "v5": {
+            "constants": {
+                "ordinalize": {
+                    "1": "najprv",
+    "2": "druhý",
+    "3": "tretí",
+    "4": "štvrtý",
+    "5": "piaty",
+    "6": "šiesty",
+    "7": "siedmy",
+    "8": "ôsmy",
+    "9": "deviaty",
+    "10": "desiaty"
                 },
-                "name": {
-                    "default": "Kør ind i {rotary_name}",
-                    "name": "Kør ind i {rotary_name} og kør ad {way_name} ",
-                    "destination": "Kør ind i {rotary_name} og kør mod {destination}"
+                "direction": {
+                    "north": "sever",
+    "northeast": "severovýchod",
+    "east": "na východ",
+    "southeast": "juhovýchod",
+    "south": "juh",
+    "southwest": "juhozápad",
+    "west": "západ",
+    "northwest": "severozápad"
                 },
-                "exit": {
-                    "default": "Tag rundkørslen og forlad ved {exit_number} afkørsel",
-                    "name": "Tag rundkørslen og forlad ved {exit_number} afkørsel ad {way_name}",
-                    "destination": "Tag rundkørslen og forlad ved {exit_number} afkørsel mod {destination}"
+                "modifier": {
+                    "left": "vľavo",
+    "right": "správny",
+    "sharp left": "ostro doľava",
+    "sharp right": "ostro vpravo",
+    "slight left": "mierne doľava",
+    "slight right": "mierne vpravo",
+    "straight": "rovno",
+    "uturn": "odvrátiť"
+    
                 },
-                "name_exit": {
-                    "default": "Kør ind i {rotary_name} og forlad ved {exit_number} afkørsel",
-                    "name": "Kør ind i {rotary_name} og forlad ved {exit_number} afkørsel ad {way_name}",
-                    "destination": "Kør ind i {rotary_name} og forlad ved {exit_number} afkørsel mod {destination}"
+                "lanes": {
+                    "xo": "Držte sa vpravo",
+    "ox": "Držte sa vľavo",
+    "xox": "Použite stredný pruh",
+    "oxo": "Držte vpravo alebo vľavo"
+    
                 }
-            }
-        },
-        "roundabout": {
-            "default": {
-                "exit": {
-                    "default": "Tag rundkørslen og forlad ved {exit_number} afkørsel",
-                    "name": "Tag rundkørslen og forlad ved {exit_number} afkørsel ad {way_name}",
-                    "destination": "Tag rundkørslen og forlad ved {exit_number} afkørsel mod {destination}"
+            },
+            "modes": {
+                "ferry": {
+                    "default": "Choďte na trajekt",
+    "name": "Nastúpte na trajekt {way_name}",
+    "destination": "Nastúpte na trajekt v smere {destination}"
+    
+                }
+            },
+            "phrase": {
+                "two linked by distance": "{instruction_one} potom, po {distance}, {instruction_two}",
+    "two linked": "{instruction_one}, potom {instruction_two}",
+    "one in distance": "Po {distance} {instruction_one}",
+    "name and ref": "{name} ({ref})",
+    "exit with number": "exit {exit}"
+            },
+            "arrive": {
+                "default": {
+                    "default": "Dorazili ste do {nth} cieľa",
+    "upcoming": "Dorazíte do {nth} cieľa",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Prišli ste na {waypoint_name}"
+    
+                },
+                "left": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vľavo",
+    "upcoming": "Do {nth} cieľa dorazíte po ľavej strane",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vľavo"
+                },
+                "right": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vpravo",
+    "upcoming": "Do {nth} cieľa dorazíte vpravo",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vpravo"
+                },
+                "sharp left": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vľavo",
+    "upcoming": "Do {nth} cieľa dorazíte po ľavej strane",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vľavo"
+                },
+                "sharp right": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vpravo",
+    "upcoming": "Do {nth} cieľa dorazíte vpravo",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vpravo"
+                },
+                "slight right": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vpravo",
+    "upcoming": "Do {nth} cieľa dorazíte vpravo",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vpravo"
+                },
+                "slight left": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je vľavo",
+    "upcoming": "Do {nth} cieľa dorazíte po ľavej strane",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je vľavo"
+                },
+                "straight": {
+                    "default": "Dorazili ste do {nth} cieľa, ktorý je rovno",
+    "upcoming": "Do {nth} cieľa dorazíte pred vami",
+    "short": "Prišli ste",
+    "short-upcoming": "Prídete",
+    "named": "Dorazili ste na {waypoint_name}, ktorý je priamo pred vami"
+                }
+            },
+            "continue": {
+                "default": {
+                    "default": "Obráťte sa na {modifier}",
+    "name": "Odbočte na {modifier} na {way_name}",
+    "destination": "Odbočte na {modifier} smerom na {destination}",
+    "exit": "Obráťte sa na {modifier} od {way_name}"
+                },
+                "straight": {
+                    "default": "Pokračujte rovno",
+    "name": "Pokračujte rovno po {way_name}",
+    "destination": "Pokračujte smerom na {destination}",
+    "distance": "Pokračujte {distance} rovno",
+    "namedistance": "Pokračujte {distance} pozdĺž {way_name}"
+                },
+                "sharp left": {
+                    "default": "Odbočte ostro doľava",
+    "name": "Odbočte ostro doľava pozdĺž {way_name}",
+    "destination": "Odbočte ostro doľava smerom na {destination}"
+                },
+                "sharp right": {
+                    "default": "Odbočte ostro doprava",
+    "name": "Odbočte ostro doprava pozdĺž {way_name}",
+    "destination": "Odbočte ostro doprava smerom na {destination}"
+                },
+                "slight left": {
+                    "default": "Odbočte doľava doľava",
+    "name": "Odbočte mierne doľava pozdĺž {way_name}",
+    "destination": "Odbočte mierne doľava smerom na {destination}"
+                },
+                "slight right": {
+                    "default": "Otočte sa mierne doprava",
+    "name": "Odbočte mierne doprava pozdĺž {way_name}",
+    "destination": "Odbočte mierne doprava smerom na {destination}"
+                },
+                "uturn": {
+                    "default": "Otočte sa",
+    "name": "Otočte sa späť na {way_name}",
+    "destination": "Otočte sa smerom k {destination}"
+                }
+            },
+            "depart": {
+                "default": {
+                    "default": "Choďte smerom {direction}",
+    "name": "Choďte smerom {direction} pozdĺž {way_name}",
+    "namedistance": "Pokračujte {distance} pozdĺž {way_name} smerom k {direction}"
+                }
+            },
+            "end of road": {
+                "default": {
+                    "default": "Obráťte sa na {modifier}",
+    "name": "Obráťte sa na {modifier} od {way_name}",
+    "destination": "Obráťte sa na {modifier} mz {destination}"
+                },
+                "straight": {
+                    "default": "Pokračujte rovno",
+    "name": "Pokračujte rovno po {way_name}",
+    "destination": "Pokračujte rovno smerom na {destination}"
+                },
+                "uturn": {
+                    "default": "Na konci cesty urobte otočku",
+    "name": "Na konci cesty otočte smerom na {way_name}",
+    "destination": "Na konci cesty otočte smerom na {destination}"
+                }
+            },
+            "fork": {
+                "default": {
+                    "default": "Pri zlúčení sa držte {modifier}",
+    "name": "Držte sa smerom k {modifier} na {way_name}",
+    "destination": "Podržať proti {modifier} proti {destination}"
+                },
+                "slight left": {
+                    "default": "Na križovatke sa držte vľavo",
+    "name": "Držte sa vľavo na {way_name}",
+    "destination": "Držte sa vľavo smerom na {destination}"
+                },
+                "slight right": {
+                    "default": "Na križovatke sa držte vpravo",
+    "name": "Držte sa vpravo na {way_name}",
+    "destination": "Držte sa vpravo smerom k {destination}"
+                },
+                "sharp left": {
+                    "default": "Na križovatke odbočte ostro doľava",
+    "name": "Odbočte ostro doľava smerom na {way_name}",
+    "destination": "Odbočte ostro doľava smerom na {destination}"
+                },
+                "sharp right": {
+                    "default": "Na križovatke odbočte ostro doprava",
+    "name": "Odbočte ostro doprava smerom na {way_name}",
+    "destination": "Odbočte ostro doprava smerom na {destination}"
+                },
+                "uturn": {
+                    "default": "Otočte sa",
+    "name": "Otočte sa na {way_name}",
+    "destination": "Otočte sa smerom k {destination}"
+                }
+            },
+            "merge": {
+                "default": {
+                    "default": "Zlúčiť do {modifier}",
+    "name": "Zlúčiť do {modifier} podľa {way_name}",
+    "destination": "Zlúčiť do {modifier} oproti {destination}"
+                },
+                "straight": {
+                    "default": "Zlúčiť sa",
+    "name": "Zlúčiť sa na {way_name}",
+    "destination": "Zaraďte sa smerom k {destination}"
+                },
+                "slight left": {
+                    "default": "Zlúčiť doľava",
+    "name": "Zaraďte sa doľava na {way_name}",
+    "destination": "Zaraďte sa doľava smerom k {destination}"
+                },
+                "slight right": {
+                    "default": "Zlúčiť doprava",
+    "name": "Zaraďte sa priamo na {way_name}",
+    "destination": "Zaraďte sa doprava smerom k {destination}"
+                },
+                "sharp left": {
+                    "default": "Zlúčiť doľava",
+    "name": "Zaraďte sa doľava na {way_name}",
+    "destination": "Zaraďte sa doľava smerom k {destination}"
+                },
+                "sharp right": {
+                    "default": "Zlúčiť doprava",
+    "name": "Zaraďte sa priamo na {way_name}",
+    "destination": "Zaraďte sa doprava smerom k {destination}"
+                },
+                "uturn": {
+                    "default": "Otočte sa",
+    "name": "Otočte sa na {way_name}",
+    "destination": "Otočte sa smerom k {destination}"
+                }
+            },
+            "new name": {
+                "default": {
+                    "default": "pokračovať {modifier}",
+    "name": "Pokračujte {modifier} pozdĺž {way_name}",
+    "destination": "Pokračujte {modifier} smerom k {destination}"
+                },
+                "straight": {
+                    "default": "Pokračujte rovno",
+    "name": "Pokračujte po {way_name}",
+    "destination": "Pokračujte smerom na {destination}"
+                },
+                "sharp left": {
+                    "default": "Odbočte ostro doľava",
+    "name": "Odbočte ostro doľava smerom na {way_name}",
+    "destination": "Odbočte ostro doľava smerom na {destination}"
+                },
+                "sharp right": {
+                    "default": "Odbočte ostro doprava",
+    "name": "Odbočte ostro doprava smerom na {way_name}",
+    "destination": "Odbočte ostro doprava smerom na {destination}"
+                },
+                "slight left": {
+                    "default": "Pokračujte doľava",
+    "name": "Pokračujte doľava po {way_name}",
+    "destination": "Pokračujte doľava smerom na {destination}"
+                },
+                "slight right": {
+                    "default": "Pokračujte doprava",
+    "name": "Pokračujte doprava po {way_name}",
+    "destination": "Pokračujte doprava smerom na {destination}"
+                },
+                "uturn": {
+                    "default": "Otočte sa",
+    "name": "Otočte sa na {way_name}",
+    "destination": "Otočte sa smerom k {destination}"
+                }
+            },
+            "notification": {
+                "default": {
+                    "default": "pokračovať {modifier}",
+    "name": "Pokračujte {modifier} pozdĺž {way_name}",
+    "destination": "Pokračujte {modifier} smerom k {destination}"
+                },
+                "uturn": {
+                    "default": "Otočte sa",
+    "name": "Otočte sa na {way_name}",
+    "destination": "Otočte sa smerom k {destination}"
+                }
+            },
+            "off ramp": {
+                "default": {
+                    "default": "Choďte východom",
+    "name": "Zíďte výjazdom {way_name}",
+    "destination": "Zíďte výjazdom smerom na {destination}",
+    "exit": "Vyberte exit {exit}",
+    "exit_destination": "Vyberte výjazd {exit} smerom na {destination}"
+                },
+                "left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vľavo",
+    "exit_destination": "Zíďte výjazdom {exit} vľavo smerom na {destination}\n"
+                },
+                "right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vpravo",
+    "exit_destination": "Zíďte výjazdom {exit} vpravo smerom na {destination}"
+                },
+                "sharp left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vľavo",
+    "exit_destination": "Zíďte výjazdom {exit} vľavo smerom na {destination}\n"
+                },
+                "sharp right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vpravo",
+    "exit_destination": "Zíďte výjazdom {exit} vpravo smerom na {destination}"
+                },
+                "slight left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vľavo",
+    "exit_destination": "Zíďte výjazdom {exit} vľavo smerom na {destination}\n"
+                },
+                "slight right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}",
+    "exit": "Vyberte výjazd {exit} vpravo",
+    "exit_destination": "Zíďte výjazdom {exit} vpravo smerom na {destination}"
+                }
+            },
+            "on ramp": {
+                "default": {
+                    "default": "Choďte východom",
+    "name": "Zíďte výjazdom {way_name}",
+    "destination": "Zíďte výjazdom smerom na {destination}"
+                },
+                "left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}"
+                },
+                "right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}"
+                },
+                "sharp left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}"
+                },
+                "sharp right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}"
+                },
+                "slight left": {
+                    "default": "Zíďte výjazdom vľavo",
+    "name": "Zíďte výjazdom vľavo na {way_name}",
+    "destination": "Zíďte výjazdom doľava smerom na {destination}"
+                },
+                "slight right": {
+                    "default": "Zíďte výjazdom vpravo",
+    "name": "Zíďte výjazdom doprava na {way_name}",
+    "destination": "Zíďte výjazdom vpravo smerom na {destination}"
+                }
+            },
+            "rotary": {
+                "default": {
+                    "default": {
+                        "default": "Vojdite do kruhového objazdu",
+    "name": "Choďte na kruhový objazd a zíďte pozdĺž {way_name}",
+    "destination": "Choďte na kruhový objazd a zamierte smerom k {destination}"
+                    },
+                    "name": {
+                        "default": "Choďte do {rotary_name}",
+    "name": "Zadajte {rotary_name} a pokračujte po {way_name}",
+    "destination": "Zadajte {rotary_name} a zamierte smerom k {destination}"
+                    },
+                    "exit": {
+                        "default": "Prejdite na kruhový objazd a zíďte výjazdom {exit_number}",
+    "name": "Choďte na kruhový objazd a odíďte výjazdom {exit_number} pozdĺž {way_name}",
+    "destination": "Choďte na kruhový objazd a odíďte výjazdom {exit_number} smerom na {destination}"
+                    },
+                    "name_exit": {
+                        "default": "Zadajte {rotary_name} a opustite výjazd {exit_number}",
+    "name": "Zadajte {rotary_name} a zíďte na {exit_number} výjazdom pozdĺž {way_name}",
+    "destination": "Zadajte {rotary_name} a vystúpte na výjazde {exit_number} smerom na {destination}"
+                    }
+                }
+            },
+            "roundabout": {
+                "default": {
+                    "exit": {
+                        "default": "Prejdite na kruhový objazd a zíďte výjazdom {exit_number}",
+    "name": "Choďte na kruhový objazd a odíďte výjazdom {exit_number} pozdĺž {way_name}",
+    "destination": "Choďte na kruhový objazd a odíďte výjazdom {exit_number} smerom na {destination}"
+                    },
+                    "default": {
+                        "default": "Vojdite do kruhového objazdu",
+    "name": "Choďte na kruhový objazd a zíďte pozdĺž {way_name}",
+    "destination": "Choďte na kruhový objazd a zamierte smerom k {destination}"
+                    }
+                }
+            },
+            "roundabout turn": {
+                "default": {
+                    "default": "Vytvorte {modifier}",
+    "name": "Vytvoriť reklamu {modifier} {way_name}",
+    "destination": "Urobte {modifier} proti {destination}"
+                },
+                "left": {
+                    "default": "odbočiť vľavo",
+    "name": "Odbočte doľava smerom na {way_name}",
+    "destination": "Odbočte doľava smerom na {destination}"
+                },
+                "right": {
+                    "default": "Odbočiť doprava",
+    "name": "Odbočte doprava smerom na {way_name}",
+    "destination": "Odbočte doprava smerom na {destination}"
+                },
+                "straight": {
+                    "default": "Pokračujte rovno",
+    "name": "Pokračujte rovno po {way_name}",
+    "destination": "Pokračujte rovno smerom na {destination}"
+                }
+            },
+            "exit roundabout": {
+                "default": {
+                    "default": "Opustite kruhový objazd",
+    "name": "Vyjdite z kruhového objazdu pozdĺž {way_name}",
+    "destination": "Opustite kruhový objazd smerom na {destination}"
+                }
+            },
+            "exit rotary": {
+                "default": {
+                    "default": "Opustite kruhový objazd",
+    "name": "Vyjdite z kruhového objazdu pozdĺž {way_name}",
+    "destination": "Opustite kruhový objazd smerom na {destination}"
+                }
+            },
+            "turn": {
+                "default": {
+                    "default": "Vytvorte {modifier}",
+    "name": "Vytvoriť reklamu {modifier} {way_name}",
+    "destination": "Urobte {modifier} proti {destination}"
+                },
+                "left": {
+                    "default": "odbočiť vľavo",
+    "name": "Odbočte doľava smerom na {way_name}",
+    "destination": "Odbočte doľava smerom na {destination}"
+                },
+                "right": {
+                    "default": "Odbočiť doprava",
+    "name": "Odbočte doprava smerom na {way_name}",
+    "destination": "Odbočte doprava smerom na {destination}"
+                },
+                "straight": {
+                    "default": "Pokračujte rovno",
+    "name": "Jazdite rovno po {way_name}",
+    "destination": "Choďte rovno smerom k {destination}"
+                }
+            },
+            "use lane": {
+                "no_lanes": {
+                    "default": "Pokračujte rovno"
                 },
                 "default": {
-                    "default": "Kør ind i rundkørslen",
-                    "name": "Tag rundkørslen og kør fra ad {way_name}",
-                    "destination": "Tag rundkørslen og kør mod {destination}"
+                    "default": "{lane_instruction}"
                 }
-            }
-        },
-        "roundabout turn": {
-            "default": {
-                "default": "Foretag et {modifier}",
-                "name": "Foretag et {modifier} ad {way_name}",
-                "destination": "Foretag et {modifier} mod {destination}"
-            },
-            "left": {
-                "default": "Drej til venstre",
-                "name": "Drej til venstre ad {way_name}",
-                "destination": "Drej til venstre mod {destination}"
-            },
-            "right": {
-                "default": "Drej til højre",
-                "name": "Drej til højre ad {way_name}",
-                "destination": "Drej til højre mod {destination}"
-            },
-            "straight": {
-                "default": "Fortsæt ligeud",
-                "name": "Fortsæt ligeud ad {way_name}",
-                "destination": "Fortsæt ligeud mod {destination}"
-            }
-        },
-        "exit roundabout": {
-            "default": {
-                "default": "Forlad rundkørslen",
-                "name": "Forlad rundkørslen ad {way_name}",
-                "destination": "Forlad rundkørslen mod  {destination}"
-            }
-        },
-        "exit rotary": {
-            "default": {
-                "default": "Forlad rundkørslen",
-                "name": "Forlad rundkørslen ad {way_name}",
-                "destination": "Forlad rundkørslen mod {destination}"
-            }
-        },
-        "turn": {
-            "default": {
-                "default": "Foretag et {modifier}",
-                "name": "Foretag et {modifier} ad {way_name}",
-                "destination": "Foretag et {modifier} mod {destination}"
-            },
-            "left": {
-                "default": "Drej til venstre",
-                "name": "Drej til venstre ad {way_name}",
-                "destination": "Drej til venstre mod {destination}"
-            },
-            "right": {
-                "default": "Drej til højre",
-                "name": "Drej til højre ad {way_name}",
-                "destination": "Drej til højre mod {destination}"
-            },
-            "straight": {
-                "default": "Fortsæt ligeud",
-                "name": "Kør ligeud ad {way_name}",
-                "destination": "Kør ligeud mod {destination}"
-            }
-        },
-        "use lane": {
-            "no_lanes": {
-                "default": "Fortsæt ligeud"
-            },
-            "default": {
-                "default": "{lane_instruction}"
             }
         }
     }
-}
 
 },{}],24:[function(_dereq_,module,exports){
 module.exports={
